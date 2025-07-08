@@ -58,5 +58,5 @@ This query should return the employeeID, the employee's first and last name, the
 select e.EmployeeID, e.FirstName, e.LastName, p.Name, SUM(s.Quantity) as TotalSold
 From sales as s
 inner join employees as e on e.EmployeeID = s.EmployeeID
-inner join products as p on p.Product = s.ProductID
+inner join products as p on p.ProductID = s.ProductID
 group by e.EmployeeID, p.ProductID;
