@@ -3,7 +3,7 @@
 
  select P.Name as Product, C.Name as Category 
  FROM products as P
- INNER JOIN catergories AS C 
+ INNER JOIN categories AS C 
  on C.CategoryID = P.CategoryID 
  where C.Name = "Computers";
  
@@ -30,7 +30,7 @@ where EmployeeID = 33809;
 /* joins: find the name of the department, and the name of the category for Appliances and Games */
 
 select d.Name as "Department Name", c.Name as "Category Name" FROM departments as d
-inner join catergories as c on c.DepartmentID = d.DepartmentID 
+inner join categories as c on c.DepartmentID = d.DepartmentID 
 where c.Name = "Appliances" OR c.Name = "Games";
 
 /* joins: find the product name, total # sold, and total price sold,
